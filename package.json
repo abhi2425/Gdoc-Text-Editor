@@ -7,7 +7,8 @@
 		"build": "parcel build client/public/index.html",
 		"dev": "nodemon src/server.js",
 		"prod": "node src/server.js",
-		"start": "concurrently \"npm run build\"  \"npm run prod\""
+		"start": "concurrently \"npm run build\"  \"npm run prod\"",
+		"start_dev": "concurrently \"npm run build\"  \"npm run dev\""
 	},
 	"keywords": [],
 	"author": "Abhinav_Jha",

@@ -2,8 +2,8 @@ import React from 'react'
 import TextEditor from './Components/TextEditor'
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 import { v4 as uuId } from "uuid"
+import Error from './Components/Error'
 const App = () => {
-   console.log(uuId)
    return (
       <Router>
          <Switch>
@@ -12,6 +12,9 @@ const App = () => {
             </Route>
             <Route path='/documents/:id'>
                <TextEditor />
+            </Route>
+            <Route to='*'>
+               <Error />
             </Route>
          </Switch>
       </Router>

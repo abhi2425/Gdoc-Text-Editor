@@ -18,6 +18,8 @@ app.use(express.static(path.join(__dirname, '/../dist')));
 
 app.get('/', (_, res) => res.redirect('/documents/' + docId))
 app.get(`/documents/*`, (_, res) => res.sendFile(path.resolve(__dirname + '/../dist/index.html')))
+app.get('*', (_, res) => res.sendFile(path.resolve(__dirname + '/../dist/index.html')))
+
 
 io.on('connection', (socket) => {
    socket.on('get-documents', async (documentId) => {

@@ -20,7 +20,7 @@ const TextEditor = () => {
 
    // set socket connection
    useEffect(() => {
-      const socket = io('localhost:8080')
+      const socket = io()
       setSocket(socket)
       return () => socket.disconnect()
    }, [])
